@@ -43,7 +43,6 @@ const pickerColor = (e)=>{
   const eyeDropper = new EyeDropper();
   eyeDropper.open().then(res=>{
     const exist = colorArr.find(item=>item===res.sRGBHex);
-    // console.log("%c Line:46 🍇 exist", "color:#f5ce50", exist);
     if(!exist){
       colorArr.push(res.sRGBHex);
       localStorage.setItem('color-list', JSON.stringify(colorArr))
